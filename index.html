@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina para Joyeria con Parallax</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- vamos colocar nuestra imagen de fondo -->
+    <div class="contenido-header">
+      <!-- id fonfo es el fondo de las hojas con js -->
+      <div class="fondo" id="fondo">
+        <h1 class="texto">Las Joyas Del Edén</h1>
+      </div>
+    </div>
+    <!-- Menu -->
+    <nav class="menu">
+      <a href="">Nosotros</a>
+      <a href="">Servicios</a>
+      <a href="">Contactos</a>
+    </nav>
+    <!-- Contenido principal de la pagina main -->
+    <main class="container">
+      <!-- agrego un div pero este al estar dentro de  container de debe ser una fila row -->
+      <div class="row nosotros justify-content-center">
+        <div class="col-12 text-center">
+          <h2 class="subtitulo"><span>¿Quienes somos?</span></h2>
+          <h3 class="titulo">
+            Nuestra pasión por piedras exóticas y la elegancia.
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            voluptate suscipit voluptatibus perspiciatis velit omnis sint cumque
+            sed qui perferendis, obcaecati excepturi, blanditiis dolorum
+            mollitia? Itaque asperiores facilis quia modi laboriosam nihil
+            nesciunt commodi similique?
+          </p>
+          <a class="enlace" href="#">Descubre tu próximo diseño</a>
+        </div>
+      </div>
+      <div class="row productos">
+        <!-- voy agregar los titulos de esta seccion -->
+        <article class="col-12 text-center">
+          <h2 class="subtitulo"><span>Lo que ofrecemos</span></h2>
+          <p class="titulo">Nuestros Productos</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+            amet officia magni nisi ad minima corrupti nemo est similique
+            incidunt quibusdam dolores quasi ducimus ratione culpa distinctio
+            laborum. Nisi vero consequatur nihil. Repellat, similique veritatis.
+          </p>
+        </article>
+        <div class="col-12">
+          <div class="row justify-content-center">
+            <article class="col-6 col-lg-3 py-1">
+              <figure class="producto">
+                <img
+                  src="/img/products/piece-01.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <figcaption class="overlay">
+                  <p class="overlay-texto">Descripcion pequeña</p>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="col-6 col-lg-3 py-1">
+              <figure class="producto">
+                <img
+                  src="/img/products/piece-02.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <figcaption class="overlay">
+                  <p class="overlay-texto">Descripcion pequeña</p>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="col-6 col-lg-3 py-1">
+              <figure class="producto">
+                <img
+                  src="/img/products/piece-03.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <figcaption class="overlay">
+                  <p class="overlay-texto">Descripcion pequeña</p>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="col-6 col-lg-3 py-1">
+              <figure class="producto">
+                <img
+                  src="/img/products/piece-04.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <figcaption class="overlay">
+                  <p class="overlay-texto">Descripcion pequeña</p>
+                </figcaption>
+              </figure>
+            </article>
+            <button class="d-block btn-productos">Todos los productos</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Separador afuera del contenedor para que abarque toda la pagina -->
+    <div class="separador text-center text-white">
+      <p>
+        <q
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          repudiandae necessitatibus nihil provident perspiciatis.</q
+        >
+      </p>
+    </div>
+
+    <!--  -->
+    <div class="containar">
+      <div class="row acerca-de justify-content-around">
+        <article class="col-10 col-sm-5">
+          <figure class="text-center">
+            <!-- para poner iconos -->
+            <img src="/img/icons/icon-team.png" alt="" />
+            <figcaption>
+              <p>
+                <strong class="mb-2">Un Equipo de expertos</strong>
+                <div class="w-100"></div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro,
+                unde?
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="col-10 col-sm-5">
+          <figure class="text-center">
+            <!-- para poner iconos -->
+            <img src="/img/icons/icon-services.png" alt="" />
+            <figcaption>
+              <p>
+                <strong class="mb-2">Una historia de servicio</strong>
+                <!-- salto de linea con boostrap -->
+                <div class="w-100"></div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro,
+                unde?
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    <div class="container-fluid px-0 galeria">
+
+      <div class="row justify-content-around mx-0 px-0">
+
+          <div class="col-4 px-0 mx-0">
+            <img src="/img/display/img-01.jpeg" alt="">
+          </div>
+
+          <div class="col-4 px-0 mx-0">
+            <img src="/img/display/img-02.jpg" alt="">
+          </div>
+
+          <div class="col-4 px-0 mx-0">
+            <img src="/img/display/img-03.jpg" alt="">
+          </div>
+
+      </div>
+    </div>
+
+   <div class="container-fluid">
+		<section class="contacto row justify-content-center">
+			<div class="col-12 col-md-9 text-center">
+				<h2 class="subtitulo"><span>Contactanos</span></h2>
+			</div>
+
+			<iframe class="col-12 col-md-9" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12656.165754243311!2d-99.16636547458687!3d19.425338392172087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1568329227255!5m2!1ses-419!2smx" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+			<div class="w-100 mb-4"></div>
+			<div class="col-auto">
+				<p class="border-bottom border-top">
+					<!-- <a href=""><i class="fas fa-phone-alt"></i></a>Tel: 2634-5637454 -->
+          <img src="/img/icons/icon-cellphone.png" alt="">Tel: 2634-5637454
+				</p>
+			</div>
+		</section>
+
+      <footer class="row justify-content-center redes-sociales">
+        <div class="col-auto">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+
+      </footer>
+
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

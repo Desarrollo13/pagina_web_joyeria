@@ -1,0 +1,295 @@
+/* primer paso margenes generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* trabajo con colores con variables */
+:root{
+    --purple-dark:#170312;
+    --purple-medium:#33032d;
+    --purple-light:#531253 ;
+    --gray-light:#eaeaea;
+    --white:#f4fffd;
+
+}
+/* tecer paso body */
+body{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+/* cuerto paso especifica la dimensión de la letra */
+p{
+    font-size: 22px;
+}
+/* Header */
+.contenido-header{
+    /* para vialulizar la imagen debemos estblecer ancho y alto */
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg-girl.jpeg);
+    /* quiero centrar la imagen */
+    background-position: center;
+    /* que ocupe todo el ancho y de arriba lo que sobre lo recorte */
+    background-size: cover;
+    /* Esto es para dejar fijo el fondo cuando el usuario hace scroll */
+    background-attachment: fixed;
+}
+.contenido-header .fondo{
+    /* ancho */
+    width: 0%;
+    height: 100%;
+    /* ancho maximo del 100% */
+    max-width: 100%;
+    background-image: url(../img/bg-top.png);
+   
+}
+.contenido-header .texto{
+    /* ancho */
+    width:calc(100vw - 20px);
+    height: 100vh;
+  font-size: 90px;
+  font-weight: 400;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  /* queremos centrar el texto ponemos display_flex */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: purple;
+  /* color transparente */
+  mix-blend-mode: multiply;
+}
+/* Navbar-menu */
+.menu{
+    /* voy trabajar con una variable */
+    background-color: var(--purple-medium);
+    /* ancho */
+    width: 100%;
+    /* lo voy a dejar pegado en la parte de arriba cuando hago scrool */
+    position: sticky;
+    top: 0%;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    /* flexbox */
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Serif',serif;
+    font-style: italic;
+    /* margen abajo */
+    margin-bottom: 60px;
+}
+.menu a{
+      /* para poder colocar un padding */
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 26px;
+    background-color: var(--purple-medium);
+    margin: 0 10px;
+    transition: .5s ease all;
+    color: var(--gray-light);
+    text-decoration: none;
+  
+}
+.menu a:hover{
+    /* translateY por que lo quiero desplazar asia bajo */
+    transform: translateY(18px);
+    background-color: var(--purple-light);
+}
+/* Nosotros */
+.nosotros{
+    /* margen en la parte de a bajo 60px */
+    margin-top: 60px;    
+}
+.subtitulo{
+    font-size: 20px;
+    color: var(--purple-dark);
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    /* me aseguro que el subtitulo quede arriba del borde */
+    z-index: 2;
+    /* transformo el texto todo a mayusculas con uppercase */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.subtitulo span{
+    background-color: var(--gray-light);
+    padding: 0 15px;
+    z-index: 99;
+    /* coloco un position relative para que se pueda aplicar el z-indece */
+    position: relative;
+}
+.subtitulo::after{
+    content: "";
+    display:inline-block;
+    /* asi podemos modificar la altura al poner incline-block */
+    height: 2px;
+    width: 100%;
+    background-color: var(--purple-dark);
+    position: relative;
+    top: -29px;
+    z-index: 1;    
+}
+.nosotros .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+   margin-bottom: 50px;
+}
+.nosotros .enlace{
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--purple-light);
+    font-weight: 700;
+    /* coloco un borde a bajo */
+    border-bottom: 1px solid transparent;
+    transition: .3s ease all;
+}
+.nosotros .enlace:hover {
+    text-decoration: none;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--purple-light);
+}
+/* Productos */
+.productos{
+    background: var(--gray-light);
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.productos .titulo {
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.productos .producto{
+    /* colo el mismo position relativo es para poder trabajar el overlay */
+    position: relative;
+    width: 100%;
+}
+.productos .overlay{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--purple-light);
+    /* para ocultar el texto que quede afuera */
+    overflow: hidden;
+    transition: .5s ease;
+}
+.productos .producto:hover .overlay {
+    width: 100%;
+    opacity: .8;
+
+}
+.productos .producto .overlay-texto {
+    /* posiciono con un top */
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /* para que todo me coloque en una linea */
+    white-space: nowrap;
+    color: var(--white);
+    font-size: 18px;
+    transform: translate(-50% ,-50%);
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+/* boton de productos */
+.productos  .btn-productos{
+    background-color: var(--purple-light);
+    color: #fff;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+.productos  .btn-productos:hover {
+    background: transparent;
+    border: 2px solid var(--purple-light);
+    color: var(--purple-light);
+}
+/* Separador */
+.separador{
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/bg-separator.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+}
+.separador p{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: "Noto Serif" , serif;
+    padding: 10px;
+}
+/* Acerca de */
+.acerca-de{
+    margin-bottom: 60px;
+
+}
+/* GALERIA */
+.galeria{
+    margin-bottom: 60px;
+}
+.galeria img{
+    height: 100%;
+    width: 100%;
+    /* para que la imgen se acomode y no pierda su volumen */
+    object-fit: cover;
+}
+/* CONTACTO */
+.contacto {
+    margin-bottom: 60px;
+}
+.redes-sociales{
+    padding: 10px;
+    background-color: var(--purple-light);
+}
+.redes-sociales a{
+    padding: 5px;
+    border-radius: 100%;
+    width: 50px;
+    transition: .3s ease all;
+}
+.redes-sociales a:hover {
+    transform: scale(1.2);
+}
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 992px) {
+    p {
+        font-size: 18px;
+    }
+
+    .contenido-header .texto {
+        font-size: 60px;
+    }
+
+    .menu a {
+        font-size: 20px;
+    }
+
+    .nosotros .titulo,
+    .productos .titulo {
+        font-size: 30px;
+    }
+
+}
+/* 31 */
+
